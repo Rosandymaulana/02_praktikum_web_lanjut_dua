@@ -19,17 +19,24 @@ use App\Http\Controllers\PageController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return "Selamat Datang";
-});
+// Route::get('/', function () {
+//     return "Selamat Datang";
+// });
 
-Route::get('/about', function () {
-    return "
-    NIM     : 2041720120
-    Nama    : Maulana Rosandy
-    Kelas   : TI - 2B";
-});
 
-Route::get('/articles/{id}', function ($id) {
-    return "Ini merupakan halaman artikel dengan id " . $id;
-});
+Route::get('/', [PageController::class, 'hello']);
+
+Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/articles/{id}', [PageController::class, 'articles']);
+
+// Route::get('/about', function () {
+//     return "
+//     NIM     : 2041720120
+//     Nama    : Maulana Rosandy
+//     Kelas   : TI - 2B";
+// });
+
+// Route::get('/articles/{id}', function ($id) {
+//     return "Ini merupakan halaman artikel dengan id " . $id;
+// });
