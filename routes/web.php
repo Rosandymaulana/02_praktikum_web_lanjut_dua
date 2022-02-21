@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +25,11 @@ use App\Http\Controllers\PageController;
 // });
 
 
-Route::get('/', [PageController::class, 'hello']);
+Route::get('/', [HomeController::class, 'hello']);
 
-Route::get('/about', [PageController::class, 'about']);
+Route::get('/about', [AboutController::class, 'about']);
 
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 // Route::get('/about', function () {
 //     return "
